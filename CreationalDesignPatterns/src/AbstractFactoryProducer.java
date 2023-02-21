@@ -1,11 +1,11 @@
 public class AbstractFactoryProducer {
-    public static AFFurnitue createFurniture(String furniture,String type){
-        AFFurnitue instance =null;
+    public static AbstractFactoryFurniture createFurniture(String furniture, String type){
+        AbstractFactoryFurniture instance =null;
         if(furniture.equalsIgnoreCase(AbstractFactoryFurnitureEnum.CHAIR.toString())){
-            instance = AFChair.getChairInstance(type);
+            instance = AbstractFactoryChair.getChairInstance(type);
         }
         else if(furniture.equalsIgnoreCase(AbstractFactoryFurnitureEnum.TABLE.toString())){
-            instance = AFTable.getTableInstance(type);
+            instance = AbstractFactoryTable.getTableInstance(type);
         }
         return instance;
     }

@@ -1,5 +1,4 @@
-public abstract class AFChair extends AFFurnitue{
-
+public abstract class AbstractFactoryTable extends AbstractFactoryFurniture {
 
     @Override
     public int fetchLegs() {
@@ -9,19 +8,19 @@ public abstract class AFChair extends AFFurnitue{
     @Override
     public double getPrice(String type) {
         if(type.equalsIgnoreCase(AbstractFactoryTypes.ARTDECOR.toString())){
-            return 250.5;
+            return 450.5;
         }
         else{
-            return 350.5;
+            return 550.5;
         }
     }
-    public static AFChair getChairInstance(String type){
-        AFChair instance = null;
+    public static AbstractFactoryTable getTableInstance(String type){
+        AbstractFactoryTable instance = null;
         if(type.equalsIgnoreCase(AbstractFactoryTypes.MODERN.toString())){
-            instance = new AFModernChair();
+            instance = new AbstractFactoryModernTable();
         }
         else if(type.equalsIgnoreCase(AbstractFactoryTypes.VICTORIAN.toString())){
-            instance = new AFVictorianChair();
+            instance = new AbstractFactoryVictorianTable();
         }
         return instance;
     }

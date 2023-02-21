@@ -1,4 +1,5 @@
-public abstract class AFTable extends AFFurnitue{
+public abstract class AbstractFactoryChair extends AbstractFactoryFurniture {
+
 
     @Override
     public int fetchLegs() {
@@ -8,19 +9,19 @@ public abstract class AFTable extends AFFurnitue{
     @Override
     public double getPrice(String type) {
         if(type.equalsIgnoreCase(AbstractFactoryTypes.ARTDECOR.toString())){
-            return 450.5;
+            return 250.5;
         }
         else{
-            return 550.5;
+            return 350.5;
         }
     }
-    public static AFTable getTableInstance(String type){
-        AFTable instance = null;
+    public static AbstractFactoryChair getChairInstance(String type){
+        AbstractFactoryChair instance = null;
         if(type.equalsIgnoreCase(AbstractFactoryTypes.MODERN.toString())){
-            instance = new AFModernTable();
+            instance = new AbstractFactoryModernChair();
         }
         else if(type.equalsIgnoreCase(AbstractFactoryTypes.VICTORIAN.toString())){
-            instance = new AFVictorianTable();
+            instance = new AbstractFactoryVictorianChair();
         }
         return instance;
     }

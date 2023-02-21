@@ -1,4 +1,4 @@
-public class AFModernTable extends AFTable {
+public class AbstractFactoryModernTable extends AbstractFactoryTable {
 
     @Override
     public void display() {
